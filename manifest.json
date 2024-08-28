@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "blinkxtension",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.twitter.com/*",
+        "*://*.x.com/*"
+      ],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "permissions": ["activeTab", "storage", "webRequest"]
+}
